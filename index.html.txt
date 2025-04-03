@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dijital Vergi Dairesi - Eşek Vergisi Ödeme</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background: #f5f5f5;
+min-height: 100vh; /* Footer'ın en alta gitmesi için */
+display: flex;
+flex-direction: column;
+}
+.header {
+background: linear-gradient(to right, #1a3c34, #2a5d53);
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.header-left {
+display: flex;
+align-items: center;
+}
+.header-left img {
+width: 50px;
+height: auto;
+margin-right: 10px;
+}
+.header-left h1 {
+color: white;
+font-size: 18px;
+margin: 0;
+}
+.header-right {
+display: flex;
+align-items: center;
+}
+.header-right a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-size: 14px;
+}
+.header-right a:hover {
+text-decoration: underline;
+}
+.header-right .user {
+background: #d32f2f;
+padding: 5px 10px;
+border-radius: 5px;
+}
+.nav {
+background: #fff;
+padding: 10px 20px;
+border-bottom: 1px solid #ddd;
+}
+.nav a {
+color: #1a3c34;
+text-decoration: none;
+margin-right: 10px;
+font-size: 14px;
+}
+.nav a:hover {
+text-decoration: underline;
+}
+.nav span {
+color: #1a3c34;
+font-size: 14px;
+}
+.main {
+max-width: 600px;
+margin: 20px auto;
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+flex: 1; /* Footer'ın en alta gitmesi için */
+}
+.main h2 {
+color: #1a3c34;
+font-size: 24px;
+margin-bottom: 10px;
+}
+.info {
+background: #e6f0fa;
+padding: 10px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+.info i {
+color: #1976d2;
+margin-right: 10px;
+font-size: 20px;
+}
+.info p {
+margin: 0;
+font-size: 14px;
+color: #333;
+}
+.form-group {
+margin-bottom: 20px;
+}
+.form-group div {
+margin-bottom: 30px; /* T.C. ve Telefon Numarası arasını açmak için */
+}
+.form-group label {
+display: block;
+font-size: 14px;
+color: #333;
+margin-bottom: 5px;
+}
+.form-group input {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background: #f5f5f5;
+font-size: 14px;
+}
+.form-group .security-code {
+display: flex;
+align-items: center;
+}
+.form-group .security-code input {
+width: 80%;
+}
+.form-group .security-code img {
+width: 50px;
+height: 30px;
+margin-left: 10px;
+}
+.donkey-section {
+margin: 20px 0;
+text-align: center;
+}
+.donkey-section p {
+font-size: 16px;
+color: #333;
+margin-bottom: 10px;
+}
+.donkey-grid {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.donkey-item {
+text-align: center;
+margin: 10px;
+}
+.donkey-item img {
+width: 80px;
+height: 80px;
+border-radius: 5px;
+}
+.donkey-item p {
+margin: 5px 0;
+font-size: 14px;
+color: #333;
+}
+.buttons {
+display: flex;
+justify-content: flex-end;
+}
+.buttons button {
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+margin-left: 10px;
+}
+.buttons .clear {
+background: #ccc;
+color: #333;
+}
+.buttons .approve {
+background: #26a69a;
+color: white;
+}
+.footer {
+background: linear-gradient(to right, #1a3c34, #2a5d53);
+padding: 20px;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 14px;
+margin-top: auto; /* Footer'ı en alta sabitlemek için */
+}
+.footer-left {
+display: flex;
+align-items: center;
+}
+.footer-left img {
+width: 50px;
+height: auto;
+margin-right: 10px;
+}
+.footer-links a {
+color: white;
+text-decoration: none;
+margin: 0 10px;
+}
+.footer-links a:hover {
+text-decoration: underline;
+}
+.footer-right {
+display: flex;
+align-items: center;
+}
+.footer-right img {
+width: 100px;
+height: auto;
+margin-left: 10px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="header-left">
+<img src="https://dijital.gib.gov.tr/_next/static/media/logo-dijital-vergi-dairesi.62efb519.svg" alt="Dijital Vergi Dairesi Logo">
+<h1>DİJİTAL VERGİ DAİRESİ</h1>
+</div>
+<div class="header-right">
+<a href="#">Hızlı Ödeme</a>
+<a href="#">Duyurular <span style="background: #d32f2f; padding: 2px 5px; border-radius: 50%;">7</span></a>
+<a href="#" class="user">Kullanıcı Girişi</a>
+</div>
+</div>
+<div class="nav">
+<a href="#">Anasayfa</a> >
+<a href="#">Hızlı Ödeme</a> >
+<span>Eşek Vergisi Ödeme</span>
+</div>
+<div class="main">
+<h2>Eşek Vergisi Ödeme</h2>
+<div class="info">
+<i>ℹ️</i>
+<p>Verginizi 00:10-23:50 saatleri arasında anlaşmalı bankalar aracılığı ile ödeyebilirsiniz.</p>
+</div>
+<div class="form-group">
+<div>
+<label for="tc">T.C./YABANCI KİMLİK/VERGİ KİMLİK NUMARASI</label>
+<input type="text" id="tc" value="" disabled>
+</div>
+<div>
+<label for="phone">TELEFON NUMARASI</label>
+<input type="text" id="phone" value="" disabled>
+</div>
+</div>
+<div class="form-group">
+<div>
+<label for="security">Güvenlik Kodu</label>
+<div class="security-code">
+<input type="text" id="security" placeholder="">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAAAtCAIAAAALAu/VAAAMnklEQVR4Xu2beZyO5RrHXynMocI5+ZBsg+wapMUWIrvsa0ey04SRJcuIoqwx9iUnyu7YabGFyr7UKYVjCae0ocWuP853nuv1uF33877zDvMy+czvj/nMPM/9bPf3vn73dd3PM76KjipXrvz0009XqVKlatWq1apVq169eo0aNWrVqlW7du06derUrVu3Xr169evXb9CgQaNGjRo3btykSZOmTZs2b968RYsWLVu2/Kej559/vnXr1m3atGnbtm27du06OOrUqVPnzp1ffPHF6Ojol156qZujmJiYHj16vPzyyz179uzdu3efPn1eeeWVfv369e/ff8CAAbGxsa+++uqgQYMGDx78+uuvDxkyZOjQoW+88cawYcOGDx8+YsSIUaNGjR49+q233hozZkxcXNy4cePGjx8/ceLESZMmTZ48ecqUKdOmTZs+ffrbb7/9L0czZ86cNWvWe47mzJkzd+7cefPmLViwYOHChf92tGTJkqVLly5btmzFihUrV65c7eiDDz748MMPP/roo7Vr165bt279+vUbNmzYuHHjpk2bNm/e/Omnn3722WdbtmzZunXr9u3bd+zYsXPnzt27d+/Zs2fv3r2ff/75fxx99dVX+/bt++abb/bv33/gwIH/Ojp8+PCRI0e+/fbbY8eOHT9+/H+Ovv/++5MnT/7www8//fSTDySVKlUSKiB55plnhErNmjWFCkieffZZodKwYUOh0tSRUHnuuedA0qpVq9aOhEr79u1B0rFjx86OhErXrl1B0r17d6ECkl69egmVvn37ChWQDBw4UKi89tprQgUkb775plAZOXKkUAHJ2LFjhcqECROECkimTp0qVGbMmAGSd955x6Uye/bsuY7mz5/vUlm8ePFSR8uXL3epvP/++0JlzZo1QgUkH3/8sVD55JNPhApItm3bJlR27drlUvniiy9A8uWXX+5zJFQOHjwIkkOHDh1xJFROnDgBku++++6kox9//PE6KhIoUJFAESoSKFCRQBEqEijNmjVr4UioSKC88MILbR0JFQmULl26RDsyqUigQEUCRahIoEBFAkWoSKBARQJFqEigQEUCRahIoEBFAkWozHT07rvvulQkUNCiRYtcKhIoaNWqVUJFAkWoSKBARQJFqEigQEUCRajs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" alt="Güvenlik Kodu">
+</div>
+</div>
+</div>
+<!-- Eşek Fotoğrafları Bölümü -->
+<div class="donkey-section">
+<p>Lütfen Size Ait Olduğu Belirlenen Aşağıdaki Eşekleri Seçiniz</p>
+<div class="donkey-grid">
+<div class="donkey-item">
+<input type="checkbox" id="rojin">
+<label for="rojin"><img src="https://avatars.mds.yandex.net/i?id=670ce87994e89ffecf9f0fe05fe803801622cf83-5299744-images-thumbs&n=13" alt="Eşek"></label>
+<p>Rojin</p>
+</div>
+<div class="donkey-item">
+<input type="checkbox" id="dilan">
+<label for="dilan"><img src="https://avatars.mds.yandex.net/i?id=893ff0ac438fa04c11765d451919eb9f348c41b0-4299919-images-thumbs&n=13" alt="Eşek"></label>
+<p>Dilan</p>
+</div>
+<div class="donkey-item">
+<input type="checkbox" id="berfin">
+<label for="berfin"><img src="https://media.baamboozle.com/uploads/images/6053/1527349156_229017" alt="Eşek"></label>
+<p>Berfin</p>
+</div>
+<div class="donkey-item">
+<input type="checkbox" id="zilan">
+<label for="zilan"><img src="https://avatars.mds.yandex.net/i?id=19c88bcd42c523d1e7127889e81b2805085b13d7-5910407-images-thumbs&n=13" alt="Eşek"></label>
+<p>Zilan</p>
+</div>
+</div>
+</div>
+<div class="buttons">
+<button class="clear">TEMİZLE</button>
+<button class="approve">ONAYLA</button>
+</div>
+</div>
+<div class="footer">
+<div class="footer-left">
+<img src="https://dijital.gib.gov.tr/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_gib_resize.bcce98f9.webp&w=256&q=75" alt="Gelir İdaresi Başkanlığı Logo">
+<span>GELİR İDARESİ BAŞKANLIĞI</span>
+</div>
+<div class="footer-links">
+<a href="#">Vergi Mevzuatı</a>
+<a href="#">Sıkça Sorulan Sorular</a>
+<a href="#">Yararlı Bilgiler</a>
+<a href="#">Bağlantılar</a>
+<a href="#">Cumhurbaşkanlığı Hazine ve Maliye Bakanlığı</a>
+<a href="#">Gelir İdaresi Başkanlığı</a>
+</div>
+<div class="footer-right">
+<img src="https://dijital.gib.gov.tr/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FfooterLink4.80df00ed.webp&w=128&q=75" alt="App Store">
+<img src="https://dijital.gib.gov.tr/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FgooglePlayLogo.c3b830ba.webp&w=128&q=75" alt="AppGallery" alt="Google Play">
+<img src="https://dijital.gib.gov.tr/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FgooglePlayLogo.c3b830ba.webp&w=128&q=75" alt="AppGallery">
+</div>
+</div>
+</body>
+</html>
